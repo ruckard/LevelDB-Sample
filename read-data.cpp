@@ -8,34 +8,9 @@
 
 using namespace std;
 
-#include <map>
-extern std::map<std::string, std::string> mapArgs;
-
 
 int main(int argc, char** argv)
 {
-    int init_parametre = 0;
-    int read_parametre = 0;
-
-    if (mapArgs.count("--init"))
-    {
-        printf("DB Init\n");
-        init_parametre = 1;
-    }
-
-    if (mapArgs.count("--read"))
-    {
-        printf("DB Read\n");
-        read_parametre = 1;
-    }
-    if ((read_parametre == 0) && (init_parametre == 0)) {
-        printf("Usage:\n./sample --init\n./sample --read");
-        exit(1);
-    }
-    if ((read_parametre == 1) && (init_parametre == 1)) {
-        printf("Using --init and --read parametres at the same time is not supported.");
-        exit(2);
-    }
 
     // Set up database connection information and open database
     leveldb::DB* db;
