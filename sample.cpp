@@ -68,7 +68,10 @@ int main(int argc, char** argv)
         {
             // cout << it->key().ToString() << " : " << it->value().ToString() << endl;
         }
-        
+
+        printf("30 seconds delay - BEGIN\n");
+        MilliSleep(30000);
+        printf("30 seconds delay - END\n");
         if (false == it->status().ok())
         {
             cerr << "An error was found during the scan" << endl;
