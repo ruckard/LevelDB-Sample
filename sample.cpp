@@ -2,7 +2,7 @@
 #include <sstream>
 #include <string>
 
-#include "leveldb/db.h"
+#include "leveldb/include/leveldb/db.h"
 
 using namespace std;
 
