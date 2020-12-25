@@ -6,18 +6,22 @@
 
 using namespace std;
 
+#include <map>
+extern std::map<std::string, std::string> mapArgs;
+
+
 int main(int argc, char** argv)
 {
     int init_parametre = 0;
     int read_parametre = 0;
 
-    if (mapArgs.count("--init") && GetRand(atoi(mapArgs["--init"])) == 0)
+    if (mapArgs.count("--init"))
     {
         printf("DB Init\n");
         init_parametre = 1;
     }
 
-    if (mapArgs.count("--read") && GetRand(atoi(mapArgs["--read"])) == 0)
+    if (mapArgs.count("--read"))
     {
         printf("DB Read\n");
         read_parametre = 1;
