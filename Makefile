@@ -1,4 +1,4 @@
-all: init-data read-data
+all: init-data read-data read-data2
 
 LIBS += $(CURDIR)/leveldb/build/libleveldb.a
 
@@ -11,5 +11,8 @@ init-data: init-data.cpp leveldb/build/libleveldb.a
 read-data: read-data.cpp leveldb/build/libleveldb.a
 	g++ -o $@ $<  $(addprefix -I,$(CURDIR)/leveldb/include) $(addprefix -I,$(CURDIR)/leveldb/helpers) $(LIBS) -lpthread
 
+read-data2: read-data2.cpp leveldb/build/libleveldb.a
+	g++ -o $@ $<  $(addprefix -I,$(CURDIR)/leveldb/include) $(addprefix -I,$(CURDIR)/leveldb/helpers) $(LIBS) -lpthread
+
 clean:
-	rm -f init-data read-data
+	rm -f init-data read-data read-data2

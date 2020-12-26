@@ -44,4 +44,11 @@ Finally you see:
 ```
 30 seconds delay - END
 ```
-.
+# Read the full blockchain - Attempt 2
+
+Now you are going to read the 3 million 260 bytes sized blocks but the cache is not going to be used.
+```
+./read-data
+```
+
+Same thing happens.
